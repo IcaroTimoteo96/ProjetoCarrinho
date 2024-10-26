@@ -9,6 +9,6 @@ namespace DesafioPleno.Domain.Interfaces
         void RemoverItem(ItemCarrinho item);
         ItemCarrinho BuscarItemPorID(long id);
         ItemCarrinho BuscarItemPorProdutoID(long id);
-        List<ItemCarrinho> BuscarItens(long carrinhoId);
+        List<ItemCarrinho> BuscarItens(int carrinhoId);
     }
 }

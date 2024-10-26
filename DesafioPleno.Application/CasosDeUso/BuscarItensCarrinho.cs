@@ -14,7 +14,7 @@ namespace DesafioPleno.Application.CasosDeUso
             _itemCarrinhoRepository = itemCarrinhoRepository;
         }
 
-        public BaseResponse<List<BuscarItensResponse>> BuscarItens(long carrinhoId)
+        public BaseResponse<List<BuscarItensResponse>> BuscarItens(int carrinhoId)
         {
             var response = new BaseResponse<List<BuscarItensResponse>>();
 
@@ -22,25 +22,21 @@ namespace DesafioPleno.Application.CasosDeUso
             {
                 var listaItens = _itemCarrinhoRepository.BuscarItens(carrinhoId);
 
-                var buscarItensResponse = new List<BuscarItensResponse>();
-
                 foreach (var item in listaItens)
                 {
-                    buscarItensResponse.Add(new BuscarItensResponse
+                    response.Data = listaItens.Select(item => new BuscarItensResponse
                     {
                         ProdutoID = item.ProdutoID,
-                        PrecoUnitatio = item.PrecoUnitario,
+                        PrecoUnitario = item.PrecoUnitario, 
                         Quantidade = item.Quantidade
-                    });
+                    }).ToList();
                 }
-
-                response.Data = buscarItensResponse;
                 response.Success = true;
                 response.Message = "Busca realizada com sucesso!";
             }
             catch(Exception ex)
             {
-                response.Message = ex.Message;
+                response.Message = $"Erro ao buscar itens: {ex.Message}";
                 response.Success = false;
             }
 

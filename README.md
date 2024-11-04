@@ -1,6 +1,6 @@
 # cart-challenge-.NET
 
-O cart-challenge-.NET é um desafio técnico que foi gerado pelo ChatGPT. O objetivo deste projeto é apenas testar minhas habilidades técnicas.
+O cart-challenge-.NET é um desafio técnico que foi gerado pelo ChatGPT para aprimorar as minhas habilidades técnicas, onde estou fazendo o desenvolvimento com base nos conceitos de arquitetura limpa, padrão de projeto Repository, injeção de dependência, e também testes automatizados.
 
 # Tarefa
 

@@ -8,60 +8,52 @@ O desafio solicitou a resolução de problemas de concorrência e integridade de
 
 # Especificações Técnicas
 
-Especificações Técnicas:
-Tecnologia:
+## 1. Tecnologias:
 
 Utilize C# com ASP.NET Core para desenvolver uma solução.
 Utilize Entity Framework Core para manipulação do banco de dados.
 O banco de dados pode ser SQL Server ou SQLite.
 Implemente Testes Unitários usando xUnit ou NUnit.
-Entidades:
 
-Carrinho:
-ID (int)
-UserId (int)
-Itens (lista de objetos ItemCarrinho)
-ItemCarrinho:
-ProdutoId (int)
-Quantidade (int)
-PreçoUnitário (decimal)
-Funcionalidades Requeridas:
+## 2. Entidades:
 
-Adicionar um item ao carrinho: Se o item já existir, deve apenas atualizar a quantidade.
+### Carrinho:
+- ID (int)
+- UserId (int)
+- Itens (lista de objetos ItemCarrinho)
 
-Remover um item do carrinho.
+### ItemCarrinho:
+- ProdutoId (int)
+- Quantidade (int)
+- PreçoUnitário (decimal)
 
-Atualizar a quantidade de um item.
+## 3. Funcionalidades Requeridas:
 
-Obter todos os itens do carrinho.
+- Adicionar um item ao carrinho: Se o item já existir, deve apenas atualizar a quantidade.
 
-Garantir que não ocorra duplicação de itens.
+- Remover um item do carrinho.
 
-Evitar problemas de concorrência quando dois ou mais usuários tentarem modificar o mesmo item simultaneamente.
+- Atualizar a quantidade de um item.
 
-Garantir alta performance em cenários de concorrência (múltiplas requisições simultâneas).
+- Obter todos os itens do carrinho.
 
-Cenário realista: Considere que o sistema terá picos de usuários durante eventos de promoção, onde milhares de pessoas podem estar adicionando e atualizando seus carrinhos ao mesmo tempo.
+- Garantir que não ocorra duplicação de itens.
 
-Requisitos adicionais:
+- Evitar problemas de concorrência quando dois ou mais usuários tentarem modificar o mesmo item simultaneamente.
 
-Implementar uma solução que previna duplicidade de itens no carrinho em um ambiente concorrente.
-Garantir a integridade dos dados mesmo quando múltiplos usuários tentarem modificar o mesmo carrinho simultaneamente.
-Use transações ou locks (otimista/pessimista) para garantir consistência.
-Implemente Testes Unitários cobrindo os principais cenários, incluindo casos de concorrência.
-O código deve ser escalável e eficiente, com foco em resolver os problemas reportados.
+- Garantir alta performance em cenários de concorrência (múltiplas requisições simultâneas).
 
 # Desenvolvimento
-O que foi feito:
+## O que foi feito:
+- Adicionar um item ao carrinho: Se o item já existir, deve apenas atualizar a quantidade.
+- Remover um item do carrinho.
+- Atualizar a quantidade de um item.
+- Obter todos os itens do carrinho.
 
-Adicionar um item ao carrinho: Se o item já existir, deve apenas atualizar a quantidade.
-Remover um item do carrinho.
-Atualizar a quantidade de um item.
-Obter todos os itens do carrinho.
-
-O que falta fazer:
-
-Garantir que não ocorra duplicação de itens.
-Testes Unitários usando xUnit ou NUnit.
+## O que falta fazer:
+- Garantir que não ocorra duplicação de itens.
+- Evitar problemas de concorrência quando dois ou mais usuários tentarem modificar o mesmo item simultaneamente.
+- Garantir alta performance em cenários de concorrência (múltiplas requisições simultâneas).
+- Testes Unitários usando xUnit ou NUnit.
 
 

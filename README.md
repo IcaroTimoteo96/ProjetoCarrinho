@@ -1,6 +1,6 @@
-# ProjetoCarrinho
+# cart-challenge-.NET
 
-O ProjetoCarrinho é um desafio técnico que foi gerado pelo ChatGPT. 
+O cart-challenge-.NET é um desafio técnico que foi gerado pelo ChatGPT. O objetivo deste projeto é apenas testar minhas habilidades técnicas.
 
 # Tarefa
 

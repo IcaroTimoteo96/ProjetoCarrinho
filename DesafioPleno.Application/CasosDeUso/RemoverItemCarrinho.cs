@@ -32,7 +32,7 @@ namespace DesafioPleno.Application.CasosDeUso
             catch (Exception ex)
             {
                 response.Success = false;
-                response.Message = ex.Message;
+                response.Message = $"Erro ao buscar itens: {ex.Message}";
             }
        
             return response;

@@ -8,6 +8,6 @@ namespace DesafioPleno.Application.CasosDeUso.Response
 
         public long Quantidade { get; set; }
 
-        public double PrecoUnitatio { get; set; }
+        public double PrecoUnitario { get; set; }
     }
 }

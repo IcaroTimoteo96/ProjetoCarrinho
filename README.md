@@ -18,11 +18,13 @@ Implemente Testes Unitários usando xUnit ou NUnit.
 ## 2. Entidades:
 
 ### Carrinho:
+
 - ID (int)
 - UserId (int)
 - Itens (lista de objetos ItemCarrinho)
 
 ### ItemCarrinho:
+
 - ProdutoId (int)
 - Quantidade (int)
 - PreçoUnitário (decimal)
@@ -44,16 +46,17 @@ Implemente Testes Unitários usando xUnit ou NUnit.
 - Garantir alta performance em cenários de concorrência (múltiplas requisições simultâneas).
 
 # Desenvolvimento
+
 ## O que foi feito:
+
 - Adicionar um item ao carrinho: Se o item já existir, deve apenas atualizar a quantidade.
 - Remover um item do carrinho.
 - Atualizar a quantidade de um item.
 - Obter todos os itens do carrinho.
 
 ## O que falta fazer:
+
 - Garantir que não ocorra duplicação de itens.
 - Evitar problemas de concorrência quando dois ou mais usuários tentarem modificar o mesmo item simultaneamente.
 - Garantir alta performance em cenários de concorrência (múltiplas requisições simultâneas).
 - Testes Unitários usando xUnit ou NUnit.
-
-

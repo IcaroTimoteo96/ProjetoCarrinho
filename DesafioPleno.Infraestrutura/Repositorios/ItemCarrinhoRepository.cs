@@ -23,9 +23,11 @@ namespace DesafioPleno.Infraestrutura.Repositorios
             return _context.ItensCarrinho.FirstOrDefault(x => x.ProdutoID == id);
         }
 
-        public List<ItemCarrinho> BuscarItens(long carrinhoId)
+        public List<ItemCarrinho> BuscarItens(int carrinhoId)
         {
-            return _context.ItensCarrinho.Where(x => x.CarrinhoID == carrinhoId).ToList();
+            return _context.ItensCarrinho
+                .Where(x => x.CarrinhoID == carrinhoId)
+                .ToList();
         }
 
         public void RemoverItem(ItemCarrinho item)
